@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Cruz Weather Intelligence Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <header>
+        <div class="brand-wrapper">
+            <div class="gemini-sparkle"></div>
+            <h1>Santa Cruz Weather Intelligence</h1>
+        </div>
+        <p class="subtitle">Predictive analytics & historical baselines for June camping expedition</p>
+    </header>
+
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-label">Historical Camp High (Avg)</div>
+            <div class="metric-value" id="hist-high-val">--<span>°C</span></div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Historical Camp Low (Avg)</div>
+            <div class="metric-value" id="hist-low-val">--<span>°C</span></div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Forecasted Week Max</div>
+            <div class="metric-value" id="fore-high-val">--<span>°C</span></div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Forecasted Week Min</div>
+            <div class="metric-value" id="fore-low-val">--<span>°C</span></div>
+        </div>
+    </div>
+
+    <div class="charts-grid">
+        <div class="chart-card">
+            <h3>7-Day Active Forecast Trend</h3>
+            <canvas id="forecastChart" height="220"></canvas>
+        </div>
+        <div class="chart-card">
+            <h3>Historical June 1–14 Baseline Profile</h3>
+            <canvas id="historicalChart" height="220"></canvas>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <h3>Upcoming 7-Day Forecast Matrix</h3>
+        <table id="forecast-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Max Temp (°C)</th>
+                    <th>Min Temp (°C)</th>
+                    <th>Thermal Delta</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
